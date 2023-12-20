@@ -17,7 +17,7 @@ class AnimeController extends Controller
         $anime->titulo = $request->titulo;
         $anime->genero = $request->genero;
         $anime->ano_lancamento = $request->ano_lancamento;
-        $anime->temporadas = $request->ano_lancamento;
+        $anime->temporadas = $request->temporadas;
         $anime->save();
 
         return response()->json([
@@ -42,6 +42,7 @@ class AnimeController extends Controller
             $anime->titulo = is_null($request->titulo) ? $anime->titulo : $request->titulo;
             $anime->genero = is_null($request->genero) ? $anime->genero : $request->genero;
             $anime->ano_lancamento = is_null($request->ano_lancamento) ? $anime->ano_lancamento : $request->ano_lancamento;
+            $anime->temporadas = is_null($request->temporadas) ? $anime->temporadas : $request->temporadas;
             $anime->save();
 
             return response()->json([
